@@ -9,7 +9,7 @@ def homepage():
 # add html code here
     return """
     <h1>Hello heroku</h1>
-    <p> Vist the <a href="http://www.moon-jelly-test.herokuapp.com/grid">Grid</a>?<br />
+    <p> Visit the <a href="http://moon-jelly-test.herokuapp.com/grid">Grid</a>?<br />
     </p>
     <p>It is currently {time}.</p>
     
