@@ -12,6 +12,10 @@ def homepage():
     <p>It is currently {time}.</p>
     
     """.format(time=the_time)
+    """
+    <p> Vist the <a href="http://www.moon-jelly-test.herokuapp.com/grid">Grid</a>?<br />
+    </p>
+    """
 
 @app.route('/grid')
 def grid():
