@@ -110,3 +110,22 @@
 2019-04-25T21:09:58.003898+00:00 app[web.1]: return render_template('index.html', time=the_time)
 2019-04-25T21:09:58.003899+00:00 app[web.1]: NameError: name 'render_template' is not defined
 2019-04-25T21:09:58.004530+00:00 app[web.1]: 10.99.131.11 - - [25/Apr/2019:21:09:57 +0000] "GET / HTTP/1.1" 500 290 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+2019-04-25T21:11:51.996875+00:00 heroku[web.1]: State changed from up to starting
+2019-04-25T21:11:51.987925+00:00 heroku[web.1]: Restarting
+2019-04-25T21:11:52.930514+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2019-04-25T21:11:52.941126+00:00 app[web.1]: [2019-04-25 21:11:52 +0000] [10] [INFO] Worker exiting (pid: 10)
+2019-04-25T21:11:52.951511+00:00 app[web.1]: [2019-04-25 21:11:52 +0000] [4] [INFO] Handling signal: term
+2019-04-25T21:11:52.952265+00:00 app[web.1]: [2019-04-25 21:11:52 +0000] [11] [INFO] Worker exiting (pid: 11)
+2019-04-25T21:11:53.052136+00:00 app[web.1]: [2019-04-25 21:11:53 +0000] [4] [INFO] Shutting down: Master
+2019-04-25T21:11:53.148622+00:00 heroku[web.1]: Process exited with status 0
+2019-04-25T21:11:55.239608+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T21:11:57.186314+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2019-04-25T21:11:57.187868+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [4] [INFO] Listening at: http://0.0.0.0:15969 (4)
+2019-04-25T21:11:57.187998+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [4] [INFO] Using worker: sync
+2019-04-25T21:11:57.192514+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [10] [INFO] Booting worker with pid: 10
+2019-04-25T21:11:57.235442+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [11] [INFO] Booting worker with pid: 11
+2019-04-25T21:11:57.615046+00:00 heroku[web.1]: State changed from starting to up
+2019-04-25T21:11:58.319002+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+2019-04-25T21:11:58.319041+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+2019-04-25T21:11:58.319779+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+2019-04-25T21:11:58.319781+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
