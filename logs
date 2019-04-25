@@ -1,0 +1,60 @@
+2019-04-19T07:26:29.872386+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file--`
+2019-04-19T07:26:31.580126+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-19T07:26:31.588979+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-19T07:26:31.560967+00:00 heroku[web.1]: Process exited with status 2
+2019-04-19T07:26:31.500603+00:00 app[web.1]: usage: gunicorn [OPTIONS] [APP_MODULE]
+2019-04-19T07:26:31.500792+00:00 app[web.1]: gunicorn: error: unrecognized arguments: --log-file--
+2019-04-19T07:26:34.703719+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file--`
+2019-04-19T07:26:36.857471+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-19T07:26:36.762952+00:00 app[web.1]: usage: gunicorn [OPTIONS] [APP_MODULE]
+2019-04-19T07:26:36.763051+00:00 app[web.1]: gunicorn: error: unrecognized arguments: --log-file--
+2019-04-19T07:26:36.829714+00:00 heroku[web.1]: Process exited with status 2
+2019-04-19T07:48:59.412241+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-19T07:49:02.464056+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file--`
+2019-04-19T07:49:04.420084+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-19T07:49:04.406025+00:00 heroku[web.1]: Process exited with status 2
+2019-04-19T07:49:04.340852+00:00 app[web.1]: usage: gunicorn [OPTIONS] [APP_MODULE]
+2019-04-19T07:49:04.341059+00:00 app[web.1]: gunicorn: error: unrecognized arguments: --log-file--
+2019-04-19T07:49:52.128130+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=c2135a30-c69d-44a4-b96b-5a4c32e36ff2 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-19T07:49:52.470094+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=powerful-escarpment-88433.herokuapp.com request_id=9c7d282f-9a86-443c-a52c-cb5300cf095c fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-19T07:50:37.223746+00:00 heroku[web.1]: State changed from crashed to down
+2019-04-19T07:52:11.322956+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-19T07:52:14.076317+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2019-04-19T07:52:14.078349+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [4] [INFO] Listening at: http://0.0.0.0:14535 (4)
+2019-04-19T07:52:14.078455+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [4] [INFO] Using worker: sync
+2019-04-19T07:52:14.083261+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [10] [INFO] Booting worker with pid: 10
+2019-04-19T07:52:14.102357+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [11] [INFO] Booting worker with pid: 11
+2019-04-19T07:52:15.604348+00:00 heroku[web.1]: State changed from starting to up
+2019-04-19T07:52:16.136862+00:00 heroku[router]: at=info method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=a7996e04-89f5-4961-b43f-3a97a15024d4 fwd="68.6.91.98" dyno=web.1 connect=1ms service=4ms status=200 bytes=297 protocol=https
+2019-04-19T07:52:16.143288+00:00 app[web.1]: 10.179.88.8 - - [19/Apr/2019:07:52:16 +0000] "GET / HTTP/1.1" 200 136 "https://dashboard.heroku.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+2019-04-19T07:52:28.678040+00:00 heroku[web.1]: State changed from up to down
+2019-04-19T07:52:29.475967+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2019-04-19T07:52:29.662659+00:00 heroku[web.1]: Process exited with status 0
+2019-04-19T07:52:29.485518+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [11] [INFO] Worker exiting (pid: 11)
+2019-04-19T07:52:29.485538+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [10] [INFO] Worker exiting (pid: 10)
+2019-04-19T07:52:29.485540+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [4] [INFO] Handling signal: term
+2019-04-19T07:52:29.584786+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [4] [INFO] Shutting down: Master
+2019-04-25T06:14:42.899839+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=40ffa866-ed40-4d98-a5db-b24852b54951 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T06:14:43.232255+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=powerful-escarpment-88433.herokuapp.com request_id=6106ecb7-3320-4132-a6c0-c264ca883015 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T06:14:54.390886+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=ad57f05f-478c-465f-8bc5-2e4cfcc8cbbb fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T06:15:07.302708+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=202ac69a-9925-41d8-a34e-ed29ea0038ad fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T06:20:36.453829+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=c5eca668-7c44-47d8-a848-1e9f02890f24 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T07:42:49.621661+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=03084f80-ac4b-402e-95e7-db3e76b542f8 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T20:18:30.964667+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=e2721a62-e409-472e-979d-9aed9f846b2a fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T20:18:31.424103+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=powerful-escarpment-88433.herokuapp.com request_id=db816955-4f53-42f3-8cbe-ebfb62ba67d4 fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T20:29:35.026290+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T20:29:37.597449+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-25T20:29:37.603813+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-25T20:29:37.580941+00:00 heroku[web.1]: Process exited with status 127
+2019-04-25T20:29:37.503608+00:00 app[web.1]: bash: gunicorn: command not found
+2019-04-25T20:29:41.201827+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T20:29:42.909808+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-25T20:29:42.896022+00:00 heroku[web.1]: Process exited with status 127
+2019-04-25T20:29:42.845437+00:00 app[web.1]: bash: gunicorn: command not found
+2019-04-25T20:30:11.444329+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=d54c7dbc-8cd3-4bb2-8d76-04832fea7445 fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T20:37:59.546860+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-25T20:38:03.195997+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T20:38:05.723646+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-25T20:38:05.634031+00:00 app[web.1]: bash: gunicorn: command not found
+2019-04-25T20:38:05.704499+00:00 heroku[web.1]: Process exited with status 127
+2019-04-25T20:38:27.566110+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=cbf7264e-94ca-40c7-be6c-e6ac256a8e4a fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
