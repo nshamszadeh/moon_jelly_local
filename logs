@@ -79,3 +79,34 @@
 2019-04-25T20:47:06.529410+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [11] [INFO] Worker exiting (pid: 11)
 2019-04-25T20:47:06.634382+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [4] [INFO] Shutting down: Master
 2019-04-25T20:47:06.752911+00:00 heroku[web.1]: Process exited with status 0
+2019-04-25T21:09:32.990448+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=f2ba2306-cd08-44d5-b6c7-ee304e61f966 fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T21:09:52.681683+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T21:09:54.882227+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2019-04-25T21:09:54.883795+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [4] [INFO] Listening at: http://0.0.0.0:58212 (4)
+2019-04-25T21:09:54.883885+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [4] [INFO] Using worker: sync
+2019-04-25T21:09:54.888108+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [10] [INFO] Booting worker with pid: 10
+2019-04-25T21:09:54.924524+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [11] [INFO] Booting worker with pid: 11
+2019-04-25T21:09:55.840474+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+2019-04-25T21:09:55.840513+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+2019-04-25T21:09:55.841024+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+2019-04-25T21:09:55.841026+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+2019-04-25T21:09:56.450203+00:00 heroku[web.1]: State changed from starting to up
+2019-04-25T21:09:58.006082+00:00 heroku[router]: at=info method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=6c31452c-737c-4145-a5f6-10d552af6d3a fwd="169.231.147.230" dyno=web.1 connect=0ms service=3ms status=500 bytes=455 protocol=https
+2019-04-25T21:09:58.003847+00:00 app[web.1]: [2019-04-25 21:09:58,002] ERROR in app: Exception on / [GET]
+2019-04-25T21:09:58.003853+00:00 app[web.1]: Traceback (most recent call last):
+2019-04-25T21:09:58.003854+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+2019-04-25T21:09:58.003856+00:00 app[web.1]: response = self.full_dispatch_request()
+2019-04-25T21:09:58.003857+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+2019-04-25T21:09:58.003858+00:00 app[web.1]: rv = self.handle_user_exception(e)
+2019-04-25T21:09:58.003860+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+2019-04-25T21:09:58.003861+00:00 app[web.1]: reraise(exc_type, exc_value, tb)
+2019-04-25T21:09:58.003862+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+2019-04-25T21:09:58.003891+00:00 app[web.1]: raise value
+2019-04-25T21:09:58.003892+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+2019-04-25T21:09:58.003893+00:00 app[web.1]: rv = self.dispatch_request()
+2019-04-25T21:09:58.003894+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+2019-04-25T21:09:58.003896+00:00 app[web.1]: return self.view_functions[rule.endpoint](**req.view_args)
+2019-04-25T21:09:58.003897+00:00 app[web.1]: File "/app/app.py", line 28, in homepage
+2019-04-25T21:09:58.003898+00:00 app[web.1]: return render_template('index.html', time=the_time)
+2019-04-25T21:09:58.003899+00:00 app[web.1]: NameError: name 'render_template' is not defined
+2019-04-25T21:09:58.004530+00:00 app[web.1]: 10.99.131.11 - - [25/Apr/2019:21:09:57 +0000] "GET / HTTP/1.1" 500 290 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
