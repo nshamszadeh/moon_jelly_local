@@ -29,10 +29,10 @@ def __repr__(self):
 def homepage():
   form = ReusableForm(request.form)
   the_time = datetime.now().strftime("%A, %d %b %Y %I:%M %p")
-  print form.errors
+  print (form.errors)
   if request.method == 'POST':
     name = request.form['name']
-    print name
+    print (name)
 
 
 # add html file here

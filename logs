@@ -1,155 +1,3 @@
-2019-04-19T07:26:29.872386+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file--`
-2019-04-19T07:26:31.580126+00:00 heroku[web.1]: State changed from starting to crashed
-2019-04-19T07:26:31.588979+00:00 heroku[web.1]: State changed from crashed to starting
-2019-04-19T07:26:31.560967+00:00 heroku[web.1]: Process exited with status 2
-2019-04-19T07:26:31.500603+00:00 app[web.1]: usage: gunicorn [OPTIONS] [APP_MODULE]
-2019-04-19T07:26:31.500792+00:00 app[web.1]: gunicorn: error: unrecognized arguments: --log-file--
-2019-04-19T07:26:34.703719+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file--`
-2019-04-19T07:26:36.857471+00:00 heroku[web.1]: State changed from starting to crashed
-2019-04-19T07:26:36.762952+00:00 app[web.1]: usage: gunicorn [OPTIONS] [APP_MODULE]
-2019-04-19T07:26:36.763051+00:00 app[web.1]: gunicorn: error: unrecognized arguments: --log-file--
-2019-04-19T07:26:36.829714+00:00 heroku[web.1]: Process exited with status 2
-2019-04-19T07:48:59.412241+00:00 heroku[web.1]: State changed from crashed to starting
-2019-04-19T07:49:02.464056+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file--`
-2019-04-19T07:49:04.420084+00:00 heroku[web.1]: State changed from starting to crashed
-2019-04-19T07:49:04.406025+00:00 heroku[web.1]: Process exited with status 2
-2019-04-19T07:49:04.340852+00:00 app[web.1]: usage: gunicorn [OPTIONS] [APP_MODULE]
-2019-04-19T07:49:04.341059+00:00 app[web.1]: gunicorn: error: unrecognized arguments: --log-file--
-2019-04-19T07:49:52.128130+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=c2135a30-c69d-44a4-b96b-5a4c32e36ff2 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-19T07:49:52.470094+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=powerful-escarpment-88433.herokuapp.com request_id=9c7d282f-9a86-443c-a52c-cb5300cf095c fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-19T07:50:37.223746+00:00 heroku[web.1]: State changed from crashed to down
-2019-04-19T07:52:11.322956+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-19T07:52:14.076317+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [4] [INFO] Starting gunicorn 19.9.0
-2019-04-19T07:52:14.078349+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [4] [INFO] Listening at: http://0.0.0.0:14535 (4)
-2019-04-19T07:52:14.078455+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [4] [INFO] Using worker: sync
-2019-04-19T07:52:14.083261+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [10] [INFO] Booting worker with pid: 10
-2019-04-19T07:52:14.102357+00:00 app[web.1]: [2019-04-19 07:52:14 +0000] [11] [INFO] Booting worker with pid: 11
-2019-04-19T07:52:15.604348+00:00 heroku[web.1]: State changed from starting to up
-2019-04-19T07:52:16.136862+00:00 heroku[router]: at=info method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=a7996e04-89f5-4961-b43f-3a97a15024d4 fwd="68.6.91.98" dyno=web.1 connect=1ms service=4ms status=200 bytes=297 protocol=https
-2019-04-19T07:52:16.143288+00:00 app[web.1]: 10.179.88.8 - - [19/Apr/2019:07:52:16 +0000] "GET / HTTP/1.1" 200 136 "https://dashboard.heroku.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
-2019-04-19T07:52:28.678040+00:00 heroku[web.1]: State changed from up to down
-2019-04-19T07:52:29.475967+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2019-04-19T07:52:29.662659+00:00 heroku[web.1]: Process exited with status 0
-2019-04-19T07:52:29.485518+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [11] [INFO] Worker exiting (pid: 11)
-2019-04-19T07:52:29.485538+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [10] [INFO] Worker exiting (pid: 10)
-2019-04-19T07:52:29.485540+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [4] [INFO] Handling signal: term
-2019-04-19T07:52:29.584786+00:00 app[web.1]: [2019-04-19 07:52:29 +0000] [4] [INFO] Shutting down: Master
-2019-04-25T06:14:42.899839+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=40ffa866-ed40-4d98-a5db-b24852b54951 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T06:14:43.232255+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=powerful-escarpment-88433.herokuapp.com request_id=6106ecb7-3320-4132-a6c0-c264ca883015 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T06:14:54.390886+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=ad57f05f-478c-465f-8bc5-2e4cfcc8cbbb fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T06:15:07.302708+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=202ac69a-9925-41d8-a34e-ed29ea0038ad fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T06:20:36.453829+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=c5eca668-7c44-47d8-a848-1e9f02890f24 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T07:42:49.621661+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=03084f80-ac4b-402e-95e7-db3e76b542f8 fwd="68.6.91.98" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T20:18:30.964667+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=e2721a62-e409-472e-979d-9aed9f846b2a fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T20:18:31.424103+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=powerful-escarpment-88433.herokuapp.com request_id=db816955-4f53-42f3-8cbe-ebfb62ba67d4 fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T20:29:35.026290+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-25T20:29:37.597449+00:00 heroku[web.1]: State changed from starting to crashed
-2019-04-25T20:29:37.603813+00:00 heroku[web.1]: State changed from crashed to starting
-2019-04-25T20:29:37.580941+00:00 heroku[web.1]: Process exited with status 127
-2019-04-25T20:29:37.503608+00:00 app[web.1]: bash: gunicorn: command not found
-2019-04-25T20:29:41.201827+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-25T20:29:42.909808+00:00 heroku[web.1]: State changed from starting to crashed
-2019-04-25T20:29:42.896022+00:00 heroku[web.1]: Process exited with status 127
-2019-04-25T20:29:42.845437+00:00 app[web.1]: bash: gunicorn: command not found
-2019-04-25T20:30:11.444329+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=d54c7dbc-8cd3-4bb2-8d76-04832fea7445 fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T20:37:59.546860+00:00 heroku[web.1]: State changed from crashed to starting
-2019-04-25T20:38:03.195997+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-25T20:38:05.723646+00:00 heroku[web.1]: State changed from starting to crashed
-2019-04-25T20:38:05.634031+00:00 app[web.1]: bash: gunicorn: command not found
-2019-04-25T20:38:05.704499+00:00 heroku[web.1]: Process exited with status 127
-2019-04-25T20:38:27.566110+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=cbf7264e-94ca-40c7-be6c-e6ac256a8e4a fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T20:45:12.490556+00:00 heroku[web.1]: State changed from crashed to starting
-2019-04-25T20:45:15.697317+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-25T20:45:17.874956+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [4] [INFO] Starting gunicorn 19.9.0
-2019-04-25T20:45:17.876455+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [4] [INFO] Listening at: http://0.0.0.0:58118 (4)
-2019-04-25T20:45:17.876654+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [4] [INFO] Using worker: sync
-2019-04-25T20:45:17.882178+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [10] [INFO] Booting worker with pid: 10
-2019-04-25T20:45:17.930981+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [11] [INFO] Booting worker with pid: 11
-2019-04-25T20:45:19.357303+00:00 heroku[web.1]: State changed from starting to up
-2019-04-25T20:45:19.308315+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T20:45:19.308335+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T20:45:19.309981+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T20:45:19.309984+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T20:46:05.291034+00:00 app[web.1]: 10.5.219.194 - - [25/Apr/2019:20:46:05 +0000] "GET / HTTP/1.1" 200 190 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
-2019-04-25T20:46:05.289127+00:00 heroku[router]: at=info method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=21edddca-33c7-459b-8258-be5df6fe2109 fwd="169.231.147.230" dyno=web.1 connect=0ms service=2ms status=200 bytes=351 protocol=https
-2019-04-25T20:47:05.519371+00:00 heroku[web.1]: State changed from up to down
-2019-04-25T20:47:06.506385+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2019-04-25T20:47:06.528952+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [10] [INFO] Worker exiting (pid: 10)
-2019-04-25T20:47:06.529095+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [4] [INFO] Handling signal: term
-2019-04-25T20:47:06.529410+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [11] [INFO] Worker exiting (pid: 11)
-2019-04-25T20:47:06.634382+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [4] [INFO] Shutting down: Master
-2019-04-25T20:47:06.752911+00:00 heroku[web.1]: Process exited with status 0
-2019-04-25T21:09:32.990448+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=f2ba2306-cd08-44d5-b6c7-ee304e61f966 fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
-2019-04-25T21:09:52.681683+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-25T21:09:54.882227+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [4] [INFO] Starting gunicorn 19.9.0
-2019-04-25T21:09:54.883795+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [4] [INFO] Listening at: http://0.0.0.0:58212 (4)
-2019-04-25T21:09:54.883885+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [4] [INFO] Using worker: sync
-2019-04-25T21:09:54.888108+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [10] [INFO] Booting worker with pid: 10
-2019-04-25T21:09:54.924524+00:00 app[web.1]: [2019-04-25 21:09:54 +0000] [11] [INFO] Booting worker with pid: 11
-2019-04-25T21:09:55.840474+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T21:09:55.840513+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T21:09:55.841024+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T21:09:55.841026+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T21:09:56.450203+00:00 heroku[web.1]: State changed from starting to up
-2019-04-25T21:09:58.006082+00:00 heroku[router]: at=info method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=6c31452c-737c-4145-a5f6-10d552af6d3a fwd="169.231.147.230" dyno=web.1 connect=0ms service=3ms status=500 bytes=455 protocol=https
-2019-04-25T21:09:58.003847+00:00 app[web.1]: [2019-04-25 21:09:58,002] ERROR in app: Exception on / [GET]
-2019-04-25T21:09:58.003853+00:00 app[web.1]: Traceback (most recent call last):
-2019-04-25T21:09:58.003854+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
-2019-04-25T21:09:58.003856+00:00 app[web.1]: response = self.full_dispatch_request()
-2019-04-25T21:09:58.003857+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
-2019-04-25T21:09:58.003858+00:00 app[web.1]: rv = self.handle_user_exception(e)
-2019-04-25T21:09:58.003860+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
-2019-04-25T21:09:58.003861+00:00 app[web.1]: reraise(exc_type, exc_value, tb)
-2019-04-25T21:09:58.003862+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
-2019-04-25T21:09:58.003891+00:00 app[web.1]: raise value
-2019-04-25T21:09:58.003892+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
-2019-04-25T21:09:58.003893+00:00 app[web.1]: rv = self.dispatch_request()
-2019-04-25T21:09:58.003894+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
-2019-04-25T21:09:58.003896+00:00 app[web.1]: return self.view_functions[rule.endpoint](**req.view_args)
-2019-04-25T21:09:58.003897+00:00 app[web.1]: File "/app/app.py", line 28, in homepage
-2019-04-25T21:09:58.003898+00:00 app[web.1]: return render_template('index.html', time=the_time)
-2019-04-25T21:09:58.003899+00:00 app[web.1]: NameError: name 'render_template' is not defined
-2019-04-25T21:09:58.004530+00:00 app[web.1]: 10.99.131.11 - - [25/Apr/2019:21:09:57 +0000] "GET / HTTP/1.1" 500 290 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
-2019-04-25T21:11:51.996875+00:00 heroku[web.1]: State changed from up to starting
-2019-04-25T21:11:51.987925+00:00 heroku[web.1]: Restarting
-2019-04-25T21:11:52.930514+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2019-04-25T21:11:52.941126+00:00 app[web.1]: [2019-04-25 21:11:52 +0000] [10] [INFO] Worker exiting (pid: 10)
-2019-04-25T21:11:52.951511+00:00 app[web.1]: [2019-04-25 21:11:52 +0000] [4] [INFO] Handling signal: term
-2019-04-25T21:11:52.952265+00:00 app[web.1]: [2019-04-25 21:11:52 +0000] [11] [INFO] Worker exiting (pid: 11)
-2019-04-25T21:11:53.052136+00:00 app[web.1]: [2019-04-25 21:11:53 +0000] [4] [INFO] Shutting down: Master
-2019-04-25T21:11:53.148622+00:00 heroku[web.1]: Process exited with status 0
-2019-04-25T21:11:55.239608+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-25T21:11:57.186314+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [4] [INFO] Starting gunicorn 19.9.0
-2019-04-25T21:11:57.187868+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [4] [INFO] Listening at: http://0.0.0.0:15969 (4)
-2019-04-25T21:11:57.187998+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [4] [INFO] Using worker: sync
-2019-04-25T21:11:57.192514+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [10] [INFO] Booting worker with pid: 10
-2019-04-25T21:11:57.235442+00:00 app[web.1]: [2019-04-25 21:11:57 +0000] [11] [INFO] Booting worker with pid: 11
-2019-04-25T21:11:57.615046+00:00 heroku[web.1]: State changed from starting to up
-2019-04-25T21:11:58.319002+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T21:11:58.319041+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T21:11:58.319779+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T21:11:58.319781+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T21:13:20.961227+00:00 heroku[web.1]: Restarting
-2019-04-25T21:13:20.981282+00:00 heroku[web.1]: State changed from up to starting
-2019-04-25T21:13:21.785702+00:00 app[web.1]: [2019-04-25 21:13:21 +0000] [10] [INFO] Worker exiting (pid: 10)
-2019-04-25T21:13:21.785714+00:00 app[web.1]: [2019-04-25 21:13:21 +0000] [11] [INFO] Worker exiting (pid: 11)
-2019-04-25T21:13:21.790053+00:00 app[web.1]: [2019-04-25 21:13:21 +0000] [4] [INFO] Handling signal: term
-2019-04-25T21:13:21.893685+00:00 app[web.1]: [2019-04-25 21:13:21 +0000] [4] [INFO] Shutting down: Master
-2019-04-25T21:13:21.776043+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2019-04-25T21:13:21.976213+00:00 heroku[web.1]: Process exited with status 0
-2019-04-25T21:13:25.574808+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
-2019-04-25T21:13:28.681100+00:00 app[web.1]: [2019-04-25 21:13:28 +0000] [4] [INFO] Starting gunicorn 19.9.0
-2019-04-25T21:13:28.684191+00:00 app[web.1]: [2019-04-25 21:13:28 +0000] [4] [INFO] Listening at: http://0.0.0.0:35570 (4)
-2019-04-25T21:13:28.684403+00:00 app[web.1]: [2019-04-25 21:13:28 +0000] [4] [INFO] Using worker: sync
-2019-04-25T21:13:28.694495+00:00 app[web.1]: [2019-04-25 21:13:28 +0000] [10] [INFO] Booting worker with pid: 10
-2019-04-25T21:13:28.752480+00:00 app[web.1]: [2019-04-25 21:13:28 +0000] [11] [INFO] Booting worker with pid: 11
-2019-04-25T21:13:29.424421+00:00 heroku[web.1]: State changed from starting to up
-2019-04-25T21:13:30.912791+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T21:13:30.912834+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T21:13:30.932045+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
-2019-04-25T21:13:30.932051+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
-2019-04-25T21:14:08.388917+00:00 heroku[router]: at=info method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=fd67e6c7-c715-49de-b362-82b22c58e3ac fwd="169.231.147.230" dyno=web.1 connect=1ms service=42ms status=200 bytes=397 protocol=https
-2019-04-25T21:14:08.392658+00:00 app[web.1]: 10.7.184.104 - - [25/Apr/2019:21:14:08 +0000] "GET / HTTP/1.1" 200 236 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
 2019-04-25T21:15:53.457599+00:00 heroku[web.1]: State changed from up to down
 2019-04-25T21:15:54.603213+00:00 heroku[web.1]: Stopping all processes with SIGTERM
 2019-04-25T21:15:54.622760+00:00 app[web.1]: [2019-04-25 21:15:54 +0000] [11] [INFO] Worker exiting (pid: 11)
@@ -157,3 +5,99 @@
 2019-04-25T21:15:54.633787+00:00 app[web.1]: [2019-04-25 21:15:54 +0000] [4] [INFO] Handling signal: term
 2019-04-25T21:15:54.737496+00:00 app[web.1]: [2019-04-25 21:15:54 +0000] [4] [INFO] Shutting down: Master
 2019-04-25T21:15:54.872748+00:00 heroku[web.1]: Process exited with status 0
+2019-04-25T21:35:51.503468+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T21:35:53.669880+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-25T21:35:53.674713+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-25T21:35:53.650145+00:00 heroku[web.1]: Process exited with status 3
+2019-04-25T21:35:53.539527+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2019-04-25T21:35:53.540973+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [4] [INFO] Listening at: http://0.0.0.0:54764 (4)
+2019-04-25T21:35:53.541068+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [4] [INFO] Using worker: sync
+2019-04-25T21:35:53.544916+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [10] [INFO] Booting worker with pid: 10
+2019-04-25T21:35:53.550141+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [10] [ERROR] Exception in worker process
+2019-04-25T21:35:53.550143+00:00 app[web.1]: Traceback (most recent call last):
+2019-04-25T21:35:53.550145+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+2019-04-25T21:35:53.550146+00:00 app[web.1]: worker.init_process()
+2019-04-25T21:35:53.550147+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+2019-04-25T21:35:53.550148+00:00 app[web.1]: self.load_wsgi()
+2019-04-25T21:35:53.550149+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+2019-04-25T21:35:53.550150+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2019-04-25T21:35:53.550152+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2019-04-25T21:35:53.550153+00:00 app[web.1]: self.callable = self.load()
+2019-04-25T21:35:53.550154+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+2019-04-25T21:35:53.550155+00:00 app[web.1]: return self.load_wsgiapp()
+2019-04-25T21:35:53.550156+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+2019-04-25T21:35:53.550157+00:00 app[web.1]: return util.import_app(self.app_uri)
+2019-04-25T21:35:53.550158+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+2019-04-25T21:35:53.550159+00:00 app[web.1]: __import__(module)
+2019-04-25T21:35:53.550161+00:00 app[web.1]: File "/app/app.py", line 32
+2019-04-25T21:35:53.550162+00:00 app[web.1]: print form.errors
+2019-04-25T21:35:53.550163+00:00 app[web.1]: ^
+2019-04-25T21:35:53.550164+00:00 app[web.1]: SyntaxError: Missing parentheses in call to 'print'. Did you mean print(form.errors)?
+2019-04-25T21:35:53.550263+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [10] [INFO] Worker exiting (pid: 10)
+2019-04-25T21:35:53.579003+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [4] [INFO] Shutting down: Master
+2019-04-25T21:35:53.579069+00:00 app[web.1]: [2019-04-25 21:35:53 +0000] [4] [INFO] Reason: Worker failed to boot.
+2019-04-25T21:35:57.075393+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T21:35:59.582776+00:00 heroku[web.1]: State changed from starting to crashed
+2019-04-25T21:35:59.403550+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2019-04-25T21:35:59.406043+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [4] [INFO] Listening at: http://0.0.0.0:56301 (4)
+2019-04-25T21:35:59.406239+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [4] [INFO] Using worker: sync
+2019-04-25T21:35:59.411250+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [10] [INFO] Booting worker with pid: 10
+2019-04-25T21:35:59.418818+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [10] [ERROR] Exception in worker process
+2019-04-25T21:35:59.418821+00:00 app[web.1]: Traceback (most recent call last):
+2019-04-25T21:35:59.418824+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+2019-04-25T21:35:59.418826+00:00 app[web.1]: worker.init_process()
+2019-04-25T21:35:59.418827+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+2019-04-25T21:35:59.418829+00:00 app[web.1]: self.load_wsgi()
+2019-04-25T21:35:59.418831+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+2019-04-25T21:35:59.418833+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2019-04-25T21:35:59.418834+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2019-04-25T21:35:59.418836+00:00 app[web.1]: self.callable = self.load()
+2019-04-25T21:35:59.418838+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+2019-04-25T21:35:59.418840+00:00 app[web.1]: return self.load_wsgiapp()
+2019-04-25T21:35:59.418841+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+2019-04-25T21:35:59.418843+00:00 app[web.1]: return util.import_app(self.app_uri)
+2019-04-25T21:35:59.418845+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+2019-04-25T21:35:59.418846+00:00 app[web.1]: __import__(module)
+2019-04-25T21:35:59.418848+00:00 app[web.1]: File "/app/app.py", line 32
+2019-04-25T21:35:59.418849+00:00 app[web.1]: print form.errors
+2019-04-25T21:35:59.418851+00:00 app[web.1]: ^
+2019-04-25T21:35:59.418853+00:00 app[web.1]: SyntaxError: Missing parentheses in call to 'print'. Did you mean print(form.errors)?
+2019-04-25T21:35:59.419101+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [10] [INFO] Worker exiting (pid: 10)
+2019-04-25T21:35:59.452737+00:00 app[web.1]: Exception ignored in: <function _releaseLock at 0x7f1819885158>
+2019-04-25T21:35:59.452744+00:00 app[web.1]: Traceback (most recent call last):
+2019-04-25T21:35:59.452789+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/logging/__init__.py", line 221, in _releaseLock
+2019-04-25T21:35:59.454556+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [11] [INFO] Booting worker with pid: 11
+2019-04-25T21:35:59.458735+00:00 app[web.1]: def _releaseLock():
+2019-04-25T21:35:59.458738+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+2019-04-25T21:35:59.458980+00:00 app[web.1]: self.reap_workers()
+2019-04-25T21:35:59.458986+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2019-04-25T21:35:59.459335+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2019-04-25T21:35:59.459420+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2019-04-25T21:35:59.460174+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [11] [ERROR] Exception in worker process
+2019-04-25T21:35:59.460177+00:00 app[web.1]: Traceback (most recent call last):
+2019-04-25T21:35:59.460179+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+2019-04-25T21:35:59.460181+00:00 app[web.1]: worker.init_process()
+2019-04-25T21:35:59.460183+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+2019-04-25T21:35:59.460184+00:00 app[web.1]: self.load_wsgi()
+2019-04-25T21:35:59.460186+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+2019-04-25T21:35:59.460188+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2019-04-25T21:35:59.460190+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2019-04-25T21:35:59.460191+00:00 app[web.1]: self.callable = self.load()
+2019-04-25T21:35:59.460193+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+2019-04-25T21:35:59.460195+00:00 app[web.1]: return self.load_wsgiapp()
+2019-04-25T21:35:59.460197+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+2019-04-25T21:35:59.460198+00:00 app[web.1]: return util.import_app(self.app_uri)
+2019-04-25T21:35:59.460200+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+2019-04-25T21:35:59.460202+00:00 app[web.1]: __import__(module)
+2019-04-25T21:35:59.460203+00:00 app[web.1]: File "/app/app.py", line 32
+2019-04-25T21:35:59.460205+00:00 app[web.1]: print form.errors
+2019-04-25T21:35:59.460207+00:00 app[web.1]: ^
+2019-04-25T21:35:59.460208+00:00 app[web.1]: SyntaxError: Missing parentheses in call to 'print'. Did you mean print(form.errors)?
+2019-04-25T21:35:59.460321+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [11] [INFO] Worker exiting (pid: 11)
+2019-04-25T21:35:59.494859+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [4] [INFO] Shutting down: Master
+2019-04-25T21:35:59.495050+00:00 app[web.1]: [2019-04-25 21:35:59 +0000] [4] [INFO] Reason: Worker failed to boot.
+2019-04-25T21:35:59.567141+00:00 heroku[web.1]: Process exited with status 3
+2019-04-25T21:36:05.778380+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=0efbc27f-3237-450c-a1fe-f36f0862c6cf fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
+Terminate batch job (Y/N)? 
+Terminate batch job (Y/N)? 
+Terminate batch job (Y/N)? 
