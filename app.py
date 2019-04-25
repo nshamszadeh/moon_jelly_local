@@ -1,10 +1,11 @@
 from flask import Flask
 from datetime import datetime
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ricculxqdypnfh:d8283cc0c6d1c05d5874a972d5176b29c24751188711916086c6e4537f035274@ec2-23-21-136-232.compute-1.amazonaws.com:5432/dfuo44q4pq80o6'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ricculxqdypnfh:d8283cc0c6d1c05d5874a972d5176b29c24751188711916086c6e4537f035274@ec2-23-21-136-232.compute-1.amazonaws.com:5432/dfuo44q4pq80o6'
 db = SQLAlchemy(app)
 
 # Create our database model
+"""
 class User(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
@@ -15,7 +16,7 @@ class User(db.Model):
 
     def __repr__(self):
         return '<E-mail %r>' % self.email
-
+"""
 @app.route('/')
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %I:%M %p")
