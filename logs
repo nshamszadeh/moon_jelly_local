@@ -58,3 +58,24 @@
 2019-04-25T20:38:05.634031+00:00 app[web.1]: bash: gunicorn: command not found
 2019-04-25T20:38:05.704499+00:00 heroku[web.1]: Process exited with status 127
 2019-04-25T20:38:27.566110+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=cbf7264e-94ca-40c7-be6c-e6ac256a8e4a fwd="169.231.147.230" dyno= connect= service= status=503 bytes= protocol=https
+2019-04-25T20:45:12.490556+00:00 heroku[web.1]: State changed from crashed to starting
+2019-04-25T20:45:15.697317+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file -`
+2019-04-25T20:45:17.874956+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2019-04-25T20:45:17.876455+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [4] [INFO] Listening at: http://0.0.0.0:58118 (4)
+2019-04-25T20:45:17.876654+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [4] [INFO] Using worker: sync
+2019-04-25T20:45:17.882178+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [10] [INFO] Booting worker with pid: 10
+2019-04-25T20:45:17.930981+00:00 app[web.1]: [2019-04-25 20:45:17 +0000] [11] [INFO] Booting worker with pid: 11
+2019-04-25T20:45:19.357303+00:00 heroku[web.1]: State changed from starting to up
+2019-04-25T20:45:19.308315+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+2019-04-25T20:45:19.308335+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+2019-04-25T20:45:19.309981+00:00 app[web.1]: /app/.heroku/python/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+2019-04-25T20:45:19.309984+00:00 app[web.1]: 'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+2019-04-25T20:46:05.291034+00:00 app[web.1]: 10.5.219.194 - - [25/Apr/2019:20:46:05 +0000] "GET / HTTP/1.1" 200 190 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+2019-04-25T20:46:05.289127+00:00 heroku[router]: at=info method=GET path="/" host=powerful-escarpment-88433.herokuapp.com request_id=21edddca-33c7-459b-8258-be5df6fe2109 fwd="169.231.147.230" dyno=web.1 connect=0ms service=2ms status=200 bytes=351 protocol=https
+2019-04-25T20:47:05.519371+00:00 heroku[web.1]: State changed from up to down
+2019-04-25T20:47:06.506385+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2019-04-25T20:47:06.528952+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [10] [INFO] Worker exiting (pid: 10)
+2019-04-25T20:47:06.529095+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [4] [INFO] Handling signal: term
+2019-04-25T20:47:06.529410+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [11] [INFO] Worker exiting (pid: 11)
+2019-04-25T20:47:06.634382+00:00 app[web.1]: [2019-04-25 20:47:06 +0000] [4] [INFO] Shutting down: Master
+2019-04-25T20:47:06.752911+00:00 heroku[web.1]: Process exited with status 0

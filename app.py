@@ -9,7 +9,6 @@ db = SQLAlchemy(app)
 
 
 # Create our database model
-"""
 class User(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
@@ -20,19 +19,13 @@ class User(db.Model):
 
     def __repr__(self):
         return '<E-mail %r>' % self.email
-"""
+
 @app.route('/')
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %I:%M %p")
 
 # add html code here
-    return """
-    <h1>Hello heroku</h1>
-    <p> Visit the <a href="http://moon-jelly-test.herokuapp.com/grid">Grid</a>?<br />
-    </p>
-    <p>It is currently {time}.</p>
-    
-    """.format(time=the_time)
+    return render_template('index.html', time=the_time)
 
 @app.route('/grid')
 def grid():
