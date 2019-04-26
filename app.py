@@ -31,13 +31,14 @@ class User(db.Model):
     self.first_name = first_name
     self.last_name = last_name
     self.specialty = specialty
-
+  
+user_form = UserForm()
 # This is the main homepage for now. GET and POST are for web forms.
 @app.route('/', methods = ['GET', 'POST'])
 def homepage():
   
   # define a form object
-  user_form = UserForm()
+ # user_form = UserForm()
 
   # if we are posting a form, i.e. submitting a form, store all the info in these variables
   if request.method == 'POST':
