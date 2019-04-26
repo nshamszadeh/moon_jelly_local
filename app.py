@@ -61,8 +61,8 @@ def homepage():
       print("Invalid input(s)!")
 
   # add html file here
- # return render_template('index.html', form = user_form)
- return render_template('home.html')
+ return render_template('home.html', form = user_form)
+ #return render_template('home.html')
 
 if __name__ == '__main__':
   app.run(debug=True, use_reloader=True)
