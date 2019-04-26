@@ -1,11 +1,12 @@
 from flask import Flask
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config.from_object('config.DevelopmentConfig')
 db = SQLAlchemy(app)
-
+migrate=Migrate(app,db)
 # Create our database model
 class User(db.Model):
     __tablename__ = "users"
@@ -63,6 +64,11 @@ def grid():
   		<div>9</div>
 	</div>
 """
+
+@app.route('/users')
+def users():
+  u = User.query.all()
+  return '<br/>'.join([a.email for a in u])
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
