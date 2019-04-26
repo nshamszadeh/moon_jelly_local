@@ -1,21 +1,22 @@
 <!doctype html>
 <html>
 	<h1>
-		Hello heroku
+		Yo what's good G
 	</h1>
 	<!--
 	    <p> 
 	    	Visit the <a href="http://moon-jelly-test.herokuapp.com/grid">Grid</a>?<br />
 	    </p>
 	-->
-	    <p>
-	    	It is currently {{time}}!.
-	    </p>
-	   <form action="" method="post">
-            {{ form.csrf }}
-			<div class="input text">
-                {{ form.name.label }} {{ form.name }}</div>
-			<div class="input submit">
-                <input type="submit" value="Submit"></div>
+	   <form action="" method="POST">
+	   		{% for field in form  %}
+	   		<p>
+	   			{{field.label}}
+	   			{{field}}
+	   		</p>
+	   		{% endfor %}
+	   		<button>
+	   			Submit this biiiitch
+	   		</button>
 		</form>
 </html>
