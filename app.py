@@ -32,9 +32,14 @@ class User(db.Model):
     self.last_name = last_name
     self.specialty = specialty
 
-# This is the main homepage for now. GET and POST are for web forms.
-@app.route('/', methods = ['GET', 'POST'])
+#This is the homepage with navbar
+@app.route('/')
 def homepage():
+  return render_template('home.html')
+
+# This is the main homepage for now. GET and POST are for web forms.
+@app.route('/register', methods = ['GET', 'POST'])
+def register():
   
   # define a form object
   user_form = UserForm()
