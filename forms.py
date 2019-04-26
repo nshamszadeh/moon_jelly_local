@@ -1,6 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, validators, SelectField
 
+# some web forms and what not
+
 class UserForm(FlaskForm):
 	specialties = [ ('Pediatrician', 'Pediatrician'), ('Cardiologist', 'Cardiologist'), 
 	('General Surgeon', 'General Surgeon'), ('Other', 'Other') ]
