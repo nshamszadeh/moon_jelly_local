@@ -1,7 +1,9 @@
 from flask import Flask
 from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wktppibqpzzfnv:9986d2db122c2b8209aca8b727ac9cace056f68c08e3f6169caca7a773820cef@ec2-50-17-227-28.compute-1.amazonaws.com:5432/d54m05ksh0rmq4'
+app.config.from_object('config.DevelopmentConfig')
 db = SQLAlchemy(app)
 
 # Create our database model
@@ -23,7 +25,7 @@ def homepage():
 # add html code here
     return """
     <h1>Hello heroku</h1>
-    <p> Visit the <a href="http://moon-jelly-test.herokuapp.com/grid">Grid</a>?<br />
+    <p> Visit the <a href="/grid">Grid</a>?<br />
     </p>
     <p>It is currently {time}.</p>
     
