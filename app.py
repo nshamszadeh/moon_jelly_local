@@ -38,7 +38,7 @@ class User(db.Model):
   
 
 # This is the main homepage for now. GET and POST are for web forms.
-@app.route('/register', methods = ['GET', 'POST'])
+@app.route('/', methods = ['GET', 'POST'])
 def homepage():
   
   # define a form object
