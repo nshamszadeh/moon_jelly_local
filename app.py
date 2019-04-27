@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from forms import UserForm
 
 # Some boilerplate setup stuff.
@@ -7,11 +8,16 @@ from forms import UserForm
 app = Flask(__name__)
 
 # URL should be whatever database URL is being used (if testing on your own use a database different from the team's )
+
+#let website reload properly 
+app.config['ASSETS_DEBUG'] = True
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ricculxqdypnfh:d8283cc0c6d1c05d5874a972d5176b29c24751188711916086c6e4537f035274@ec2-23-21-136-232.compute-1.amazonaws.com:5432/dfuo44q4pq80o6'
 app.config['SECRET_KEY'] = 'mOon_jElLy wAs oRiGiNa11y g0nNa b3 SuP3r MaRi0 gAlAxY' # need to change later
 # im not mocking Aidan, this key actually needs to be secure which is why it looks all crazy
 
 db = SQLAlchemy(app) # wow we have a database
+migrate = Migrate(app, db)
 
 # Create our database model. 
 class User(db.Model):
@@ -53,17 +59,12 @@ def homepage():
       new_user = User(email, first_name, last_name, specialty)
       db.session.add(new_user) # add to database
       db.session.commit() # for some reason we also need to commit it otherwise it won't add
+      return redirect('/schedule')#go to schedule after submit 
     else:
       print("Invalid input(s)!")
 
   # add html file here
   return render_template('home.html', form = user_form)
-
-
-if __name__ == '__main__':
-  app.run(debug=True, use_reloader=True)
-
-
 
 """
 
@@ -95,15 +96,23 @@ def homepage():
 # add html code here
 return 
 
+"""
 
+@app.route('/schedule')
+def schedule():
+  u = User.query.all()
+  return render_template('schedule.html', users=u)
 
+#test to print out the first names of users 
 @app.route('/users')
 def users():
   u = User.query.all()
-  return '<br/>'.join([a.email for a in u])
+  return '<br/>'.join([a.first_name for a in u])
+
+#return render_template('home.html', form = user_form)
 
 if __name__ == '__main__':
-app.run(debug=True, use_reloader=True)
+  app.run(debug=True, use_reloader=True)
 
 
-"""
+
