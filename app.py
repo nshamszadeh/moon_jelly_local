@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -12,7 +14,8 @@ app = Flask(__name__)
 #let website reload properly 
 app.config['ASSETS_DEBUG'] = True
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ricculxqdypnfh:d8283cc0c6d1c05d5874a972d5176b29c24751188711916086c6e4537f035274@ec2-23-21-136-232.compute-1.amazonaws.com:5432/dfuo44q4pq80o6'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ricculxqdypnfh:d8283cc0c6d1c05d5874a972d5176b29c24751188711916086c6e4537f035274@ec2-23-21-136-232.compute-1.amazonaws.com:5432/dfuo44q4pq80o6'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SECRET_KEY'] = 'mOon_jElLy wAs oRiGiNa11y g0nNa b3 SuP3r MaRi0 gAlAxY' # need to change later
 # im not mocking Aidan, this key actually needs to be secure which is why it looks all crazy
 
@@ -98,6 +101,10 @@ return
 
 """
 
+@app.route('/about')
+def about():
+  return render_template('about.html')
+
 @app.route('/schedule')
 def schedule():
   u = User.query.all()
@@ -113,6 +120,3 @@ def users():
 
 if __name__ == '__main__':
   app.run(debug=True, use_reloader=True)
-
-
-
