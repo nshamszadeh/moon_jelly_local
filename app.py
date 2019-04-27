@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from forms import UserForm
+from forms import LoginForm, UserForm
 
 # Some boilerplate setup stuff.
 
@@ -98,10 +98,23 @@ return
 
 """
 
+#create a schedule page
 @app.route('/schedule')
 def schedule():
   u = User.query.all()
   return render_template('schedule.html', users=u)
+
+#create a log in page
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+  form = LoginForm()
+  if request.method == 'POST':
+    email = request.form['email']
+    if User.query.filter_by(email=email).first():
+      return redirect('/')#go to schedule after submit 
+    else:
+      print("Invalid input(s)!")
+  return render_template('login.html', form=form)
 
 #test to print out the first names of users 
 @app.route('/users')
