@@ -40,7 +40,7 @@ class User(db.Model):
   
 #user_form = UserForm()
 # This is the main homepage for now. GET and POST are for web forms.
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/add', methods = ['GET', 'POST'])
 def homepage():
   
   # define a form object
@@ -105,13 +105,13 @@ def schedule():
   return render_template('schedule.html', users=u)
 
 #create a log in page
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
   form = LoginForm()
   if request.method == 'POST':
     email = request.form['email']
     if User.query.filter_by(email=email).first():
-      return redirect('/')#go to schedule after submit 
+      return redirect('/add')#go to schedule after submit 
     else:
       print("Invalid input(s)!")
   return render_template('login.html', form=form)
