@@ -3,6 +3,9 @@ from wtforms import StringField, validators, SelectField
 
 # some web forms and what not
 
+class LoginForm(FlaskForm):
+	email = StringField('Email', [validators.Email(message = 'Please Enter A Valid Email')])
+
 class UserForm(FlaskForm):
 	specialties = [ ('Pediatrician', 'Pediatrician'), ('Cardiologist', 'Cardiologist'), 
 	('General Surgeon', 'General Surgeon'), ('Other', 'Other') ]
