@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="jumbotron text-center">
-    	<h1>Welcome To FlaskApp</h1>
+    	<h1>Welcome To Moon Jelly</h1>
     	<p class="lead">This application is built on the Python Flask framework and is to help planning schedules for doctors</p>
     </div>
     <form action="" method="POST">
@@ -14,6 +14,17 @@
 	   		{% endfor %}
 	   		<button>
 	   			Submit
+	   		</button>
+		</form>
+	<form action="" method="REMOVE">
+	   		{% for field in delete_form  %}
+	   		<p>
+	   			{{field.label}}
+	   			{{field}}
+	   		</p>
+	   		{% endfor %}
+	   		<button>
+	   			Delete
 	   		</button>
 		</form>
 {% endblock %}

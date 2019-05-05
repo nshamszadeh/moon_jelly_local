@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from forms import LoginForm, UserForm
+from forms import LoginForm, UserForm, DeleteForm
 
 # Some boilerplate setup stuff.
 
@@ -18,6 +18,7 @@ app.config['ASSETS_DEBUG'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SECRET_KEY'] = 'mOon_jElLy wAs oRiGiNa11y g0nNa b3 SuP3r MaRi0 gAlAxY' # need to change later
 # im not mocking Aidan, this key actually needs to be secure which is why it looks all crazy
+# I feel personally attacked
 
 db = SQLAlchemy(app) # wow we have a database
 migrate = Migrate(app, db)
@@ -43,7 +44,7 @@ class User(db.Model):
   
 #user_form = UserForm()
 # This is the main homepage for now. GET and POST are for web forms.
-@app.route('/add', methods = ['GET', 'POST'])
+@app.route('/add', methods = ['GET', 'POST', 'REMOVE'])
 def homepage():
   
   # define a form object
@@ -62,12 +63,20 @@ def homepage():
       new_user = User(email, first_name, last_name, specialty)
       db.session.add(new_user) # add to database
       db.session.commit() # for some reason we also need to commit it otherwise it won't add
-      return redirect('/schedule')#go to schedule after submit 
+      return redirect('/schedule')#go to schedule after submit  ####This doesn't seem to work?
     else:
       print("Invalid input(s)!")
 
+  delete_form = DeleteForm()
+
+  if request.method == 'REMOVE':
+    Id2Rm = request.form['ID'] 
+    toRM = User.query.filter_by(id = Id2Rm).first()
+    db.session.delete(toRM)
+    db.session.commit()
+
   # add html file here
-  return render_template('home.html', form = user_form)
+  return render_template('home.html', form = user_form, delete_form = delete_form)
 
 """
 
@@ -109,7 +118,8 @@ def about():
 @app.route('/schedule')
 def schedule():
   u = User.query.all()
-  return render_template('schedule.html', users=u)
+  cardi = User.query.filter_by(specialty="cardiologist").all()
+  return render_template('schedule.html', users=u, cardi=cardi)
 
 #create a log in page
 @app.route('/', methods=['GET', 'POST'])

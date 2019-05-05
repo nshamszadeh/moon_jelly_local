@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, validators, SelectField
+from wtforms import StringField, validators, SelectField, IntegerField
 
 # some web forms and what not
 
@@ -13,3 +13,6 @@ class UserForm(FlaskForm):
 	last_name = StringField('Last Name', [validators.DataRequired(message = 'Please Enter Something')])
 	email = StringField('Email', [validators.Email(message = 'Please Enter A Valid Email')])
 	specialty = SelectField('Specialty', choices = specialties)
+
+class DeleteForm(FlaskForm):
+	ID = IntegerField('ID', [validators.DataRequired(message = 'Please Enter Something')])
