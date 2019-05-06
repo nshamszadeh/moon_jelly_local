@@ -45,7 +45,7 @@ class User(db.Model):
 #user_form = UserForm()
 # This is the main homepage for now. GET and POST are for web forms.
 @app.route('/add', methods = ['GET', 'POST'])
-def homepage():
+def add():
   
   # define a form object
   user_form = UserForm()
@@ -68,7 +68,7 @@ def homepage():
       print("Invalid input(s)!")
 
   # add html file here
-  return render_template('home.html', form = user_form)
+  return render_template('add.html', form = user_form)
 
 
 @app.route('/remove', methods = ['GET', 'POST'])
@@ -80,10 +80,13 @@ def remove():
     Name2Rm = request.form['first_name']
    
     if delete_form.validate(): 
-      toRM = User.query.filter_by(first_name = Name2Rm).first()
-      db.session.delete(toRM)
-      db.session.commit()
-      return redirect('/schedule')#go to schedule after submit  ####This doesn't seem to work?
+      if User.query.filter_by(first_name = Name2Rm).first() != None:
+        toRM = User.query.filter_by(first_name = Name2Rm).first()
+        db.session.delete(toRM)
+        db.session.commit()
+        return redirect('/schedule')
+      else:
+        print("User First Name Not Found")
     else:
       print("Invalid input(s)!")
 
