@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from forms import LoginForm, UserForm, DeleteForm
+from flask_table import Table, Col
 
 # Some boilerplate setup stuff.
 
@@ -41,6 +42,13 @@ class User(db.Model):
     self.first_name = first_name
     self.last_name = last_name
     self.specialty = specialty
+
+class UserTable(Table):
+    id = Col('id')
+    first_name = Col('First Name')
+    last_name = Col('Last Name')
+    specialty = Col('Specialty')
+    email = Col('Email')
   
 #user_form = UserForm()
 # This is the main homepage for now. GET and POST are for web forms.
@@ -133,8 +141,9 @@ def about():
 @app.route('/schedule')
 def schedule():
   u = User.query.all()
-  cardi = User.query.filter_by(specialty="cardiologist").all()
-  return render_template('schedule.html', users=u, cardi=cardi)
+  utable = UserTable(u)
+  #cardi = User.query.filter_by(specialty="cardiologist").all()
+  return render_template('schedule.html', users=u, utable=utable)
 
 #create a log in page
 @app.route('/', methods=['GET', 'POST'])
@@ -152,7 +161,8 @@ def login():
 @app.route('/users')
 def users():
   u = User.query.all()
-  return '<br/>'.join([a.first_name for a in u])
+  utable = UserTable(u)
+  return render_template('users.html', utable=utable)
 
 #return render_template('home.html', form = user_form)
 
