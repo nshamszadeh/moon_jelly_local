@@ -71,7 +71,7 @@ def homepage():
   return render_template('home.html', form = user_form)
 
 
-  @app.route('/remove', methods = ['GET', 'POST'])
+@app.route('/remove', methods = ['GET', 'POST'])
 def remove():
   
   delete_form = DeleteForm()
