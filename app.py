@@ -44,7 +44,7 @@ class User(db.Model):
   
 #user_form = UserForm()
 # This is the main homepage for now. GET and POST are for web forms.
-@app.route('/add', methods = ['GET', 'POST', 'REMOVE'])
+@app.route('/add', methods = ['GET', 'POST'])
 def homepage():
   
   # define a form object
@@ -67,9 +67,16 @@ def homepage():
     else:
       print("Invalid input(s)!")
 
+  # add html file here
+  return render_template('home.html', form = user_form)
+
+
+  @app.route('/remove', methods = ['GET', 'POST'])
+def remove():
+  
   delete_form = DeleteForm()
 
-  if request.method == 'REMOVE':
+  if request.method == 'POST':
     Name2Rm = request.form['first_name']
    
     if delete_form.validate(): 
@@ -81,7 +88,7 @@ def homepage():
       print("Invalid input(s)!")
 
   # add html file here
-  return render_template('home.html', form = user_form, delete_form = delete_form)
+  return render_template('remove.html', delete_form = delete_form)
 
 """
 
