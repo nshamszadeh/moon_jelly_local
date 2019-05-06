@@ -15,4 +15,4 @@ class UserForm(FlaskForm):
 	specialty = SelectField('Specialty', choices = specialties)
 
 class DeleteForm(FlaskForm):
-	first = first_name = StringField('First Name', [validators.DataRequired(message = 'Please Enter Something')])
+	first_name = StringField('First Name', [validators.DataRequired(message = 'Please Enter Something')])
