@@ -72,7 +72,7 @@ def homepage():
   if request.method == 'REMOVE':
     Name2Rm = request.form['first_name']
    
-    if user_form.validate(): 
+    if delete_form.validate(): 
       toRM = User.query.filter_by(first_name = Name2Rm).first()
       db.session.delete(toRM)
       db.session.commit()
