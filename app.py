@@ -70,10 +70,14 @@ def homepage():
   delete_form = DeleteForm()
 
   if request.method == 'REMOVE':
-    Id2Rm = request.form['ID'] 
-    toRM = User.query.filter_by(id = Id2Rm).first()
-    db.session.delete(toRM)
-    db.session.commit()
+    Name2Rm = request.form['first_name']
+    if delete_form.validate(): 
+      toRM = User.query.filter_by(first_name = Name2Rm).first()
+      db.session.delete(toRM)
+      db.session.commit()
+      return redirect('/schedule')#go to schedule after submit  ####This doesn't seem to work?
+    else:
+      print("Invalid input(s)!")
 
   # add html file here
   return render_template('home.html', form = user_form, delete_form = delete_form)
