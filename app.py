@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session, abort
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from forms import LoginForm, UserForm, DeleteForm
@@ -20,6 +20,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SECRET_KEY'] = 'mOon_jElLy wAs oRiGiNa11y g0nNa b3 SuP3r MaRi0 gAlAxY' # need to change later
 # im not mocking Aidan, this key actually needs to be secure which is why it looks all crazy
 # I feel personally attacked
+# chill with that
 
 db = SQLAlchemy(app) # wow we have a database
 migrate = Migrate(app, db)
@@ -101,38 +102,6 @@ def remove():
   # add html file here
   return render_template('remove.html', delete_form = delete_form)
 
-"""
-
-from flask import Flask
-from datetime import datetime
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-
-app = Flask(__name__)
-app.config.from_object('config.DevelopmentConfig')
-db = SQLAlchemy(app)
-migrate=Migrate(app,db)
-# Create our database model
-class User(db.Model):
-    __tablename__ = "users"
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), unique=True)
-
-    def __init__(self, email):
-        self.email = email
-
-    def __repr__(self):
-        return '<E-mail %r>' % self.email
-
-@app.route('/')
-def homepage():
-    the_time = datetime.now().strftime("%A, %d %b %Y %I:%M %p")
-
-# add html code here
-return 
-
-"""
-
 @app.route('/about')
 def about():
   return render_template('about.html')
@@ -148,6 +117,15 @@ def schedule():
 #create a log in page
 @app.route('/', methods=['GET', 'POST'])
 def login():
+"""
+  if not session.get('logged_in'):
+    return render_template('login.html')
+  else:
+    return redirect('/add')
+"""
+  
+
+
   form = LoginForm()
   if request.method == 'POST':
     email = request.form['email']

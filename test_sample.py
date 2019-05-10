@@ -12,7 +12,7 @@ def test_new_user(new_user):
     """
     GIVEN a User model
     WHEN a new User is created
-    THEN check the email, name, and specialty are good to go
+    THEN check the email, name, and specialty are gucci
     """
     assert new_user.email == 'hi@gmail.com'
     assert new_user.first_name == 'first'
