@@ -16,7 +16,7 @@ app = Flask(__name__)
 app.config['ASSETS_DEBUG'] = True
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-app.config['SQLALCHEMY_DATABASE_URI'] = '    postgres://wktppibqpzzfnv:9986d2db122c2b8209aca8b727ac9cace056f68c08e3f6169caca7a773820cef@ec2-50-17-227-28.compute-1.amazonaws.com:5432/d54m05ksh0rmq4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wktppibqpzzfnv:9986d2db122c2b8209aca8b727ac9cace056f68c08e3f6169caca7a773820cef@ec2-50-17-227-28.compute-1.amazonaws.com:5432/d54m05ksh0rmq4'
 app.config['SECRET_KEY'] = 'mOon_jElLy wAs oRiGiNa11y g0nNa b3 SuP3r MaRi0 gAlAxY' # need to change later
 # im not mocking Aidan, this key actually needs to be secure which is why it looks all crazy
 # I feel personally attacked

@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<table style="width:100%">
+  <tr>
+    <th>Mon</th>
+    <th>Tue</th> 
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sat</th>
+    <th>Sun</th>
+  </tr>
+{% for user in users %}
+  <tr>
+	    <td>{{ user.id }} - {{ user.first_name }} - {{ user.specialty}} </td>
+  </tr>
+{% endfor %}
+
+
+ <!--  <tr>
+    <td></td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+
+  <tr>
+    <td>Alice</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+ -->
+</table> 
+    
+{% endblock %}
