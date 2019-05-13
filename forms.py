@@ -1,10 +1,12 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, validators, SelectField #, IntegerField
+from wtforms.widgets import PasswordInput
 
 # some web forms and what not
 
 class LoginForm(FlaskForm):
 	email = StringField('Email', [validators.Email(message = 'Please Enter A Valid Email')])
+	password = StringField('Password', widget=PasswordInput(hide_value=True))
 
 class UserForm(FlaskForm):
 	specialties = [ ('Pediatrician', 'Pediatrician'), ('Cardiologist', 'Cardiologist'), 

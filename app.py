@@ -109,7 +109,7 @@ def about():
 #create a schedule page
 @app.route('/schedule')
 def schedule():
-  u = User.query.all()
+  u = User.query.all()  
   utable = UserTable(u)
   #cardi = User.query.filter_by(specialty="cardiologist").all()
   return render_template('schedule.html', users=u, utable=utable)
