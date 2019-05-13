@@ -50,6 +50,7 @@ class UserTable(Table):
     last_name = Col('Last Name')
     specialty = Col('Specialty')
     email = Col('Email')
+  #  password = Col('Password')
   
 #user_form = UserForm()
 # This is the main homepage for now. GET and POST are for web forms.
@@ -89,7 +90,7 @@ def remove():
     Name2Rm = request.form['first_name']
    
     if delete_form.validate(): 
-      if User.query.filter_by(first_name = Name2Rm).first() != None:
+      if User.query.filter_by(first_name = Name2Rm).first() != None: 
         toRM = User.query.filter_by(first_name = Name2Rm).first()
         db.session.delete(toRM)
         db.session.commit()
@@ -120,7 +121,8 @@ def login():
   form = LoginForm()
   if request.method == 'POST':
     email = request.form['email']
-    if User.query.filter_by(email=email).first():
+    password = request.form['password']
+    if User.query.filter_by(email=email).first(): # and User.query.filter_by(password = password).first():
       return redirect('/add')#go to schedule after submit 
     else:
       print("Invalid input(s)!")
